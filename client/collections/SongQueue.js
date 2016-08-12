@@ -20,6 +20,7 @@ var SongQueue = Backbone.Collection.extend({
     });
 
     this.on('enqueue', function(song) {
+      console.log('song');
       this.add(song);
     });
 
