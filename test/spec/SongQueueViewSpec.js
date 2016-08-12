@@ -35,4 +35,19 @@ describe('SongQueueView', function() {
     expect(view.render).to.have.been.called;
   });
 
+  //write tests for below two cases
+  it('should render queue when an item is removed', function() {
+    sinon.spy(SongQueueEntryView.prototype, 'render');
+    view = new SongQueueView({collection: fakeSongs});
+    view.render();
+    expect(SongQueueEntryView.prototype.render).to.equal(false);
+  });
+
+  it('should remove object from queue when it is clicked', function() {
+    sinon.spy(SongQueueEntryView.prototype, 'render');
+    view = new SongQueueView({collection: fakeSongs});
+    view.render();
+    expect(SongQueueEntryView.prototype.render).to.equal(false);
+  });
+
 });
